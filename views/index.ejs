@@ -1,0 +1,24 @@
+            <%- include ('./components/header') %>   
+             <%- include ('./addFeed') %>
+<% if (result.length >0) {%>
+    <%result.forEach(element => { %>
+       <div class="card" style="width: 18rem">
+           <div class="card-body" >
+            <h5 class="card-title"><%= element.name %></h5>
+                 <p class="card-text"><%= element.message%></p>
+                 <div style="margin-left: 10rem">
+             <a class="card-link" href=/feed/<%= element._id %>>See more</a>
+        </div>
+            </div>
+          </div>
+           <div style="margin-left: 20rem">
+             <a class="card-link" href=/<%= element.createdAt %>><%= element.createdAt %></a>
+           </div>
+        
+          <% }); %>
+   <% } else {%>
+       (there is no record)
+       <%}%>
+       
+        
+        <%- include('./components/footer')%>

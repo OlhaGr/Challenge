@@ -1,0 +1,18 @@
+<%- include ('./components/header') %>
+<%- include ('./components/nav') %>
+<form method = 'POST' action="/add-feed">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" name="name"  class="form-control" id="exampleInputEmail1" aria-describedby="add-feed" placeholder="name">
+     
+     </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Post</label>
+           <input type="text" name="message" value="" class="form-control" id="exampleInputPassword1" placeholder="message">
+          
+         </div>
+                           
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+<%- include('./components/footer')%>

@@ -1,0 +1,20 @@
+<%- include ('./components/header') %>   
+<%- include('./components/nav')%>
+        <% if (result) {%>
+        <div class="card" style="width: 18rem">
+            <div class="card-header">
+                <%= result.name %>
+            </div >
+            <div class="card-body">
+                <h5 class="card-title"><%= result.name %></h5>
+                <p class="card-text"><%= result.message %></p>
+                <a href=/feed/edit/<%= result._id %> class="btn btn-primary">update</a>
+                <a href=/delite-feed/<%= result._id %> class="card-link btn btn-warning"> delete</a>
+            </div>
+        </div>
+       
+        <% } else {%>
+        there is no record
+            <%}%>
+
+<%- include('./components/footer')%>
